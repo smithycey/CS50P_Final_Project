@@ -30,7 +30,7 @@ class App(ctk.CTk):
         #self.geometry("1000x1000")
         #self.columnconfigure(0, weight=1)
         #self.rowconfigure(0, weight=1)
-        ctk.set_default_color_theme("theme.json")
+        ctk.set_default_color_theme(r"Project\theme.json")
 
 
         global order_total_var
@@ -87,7 +87,7 @@ class Title_frame(ctk.CTkFrame):
        self.title_page_title.pack(pady=(30,30))
 
        #--->logo widget
-       self.title_page_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo2.png"),size=(350,350))
+       self.title_page_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo2.png"),size=(350,350))
        self.title_page_logo_widget = ctk.CTkLabel(self,image=self.title_page_logo, fg_color="#161219", text="")
        self.title_page_logo_widget.pack()
 
@@ -139,7 +139,7 @@ class Menu_navigation_frame(ctk.CTkFrame):
         self.menu_navigation_top_frame = ctk.CTkFrame(self,)
         
         #--->logo
-        self.menu_navigation_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.menu_navigation_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.menu_navigation_logo_widget = ctk.CTkLabel(self.menu_navigation_top_frame, image=self.menu_navigation_logo, text="")
 
          #--->title
@@ -187,15 +187,15 @@ class Menu_navigation_frame(ctk.CTkFrame):
         self.menu_navigation_bottom_frame = ctk.CTkFrame(self)
 
         #--->facebook widget
-        facebook_logo = ctk.CTkImage(Image.open(r"images\facebook_logo.gif"),size=(30,30))
+        facebook_logo = ctk.CTkImage(Image.open(r"Project\images\facebook_logo.gif"),size=(30,30))
         facebook_logo_widget = ctk.CTkButton(self.menu_navigation_bottom_frame, text="",  image=facebook_logo, height=30, width=30)
 
         #--->instagram widget
-        instagram_logo = ctk.CTkImage(Image.open(r"images\instagram_logo.png"),size=(30,30))
+        instagram_logo = ctk.CTkImage(Image.open(r"Project\images\instagram_logo.png"),size=(30,30))
         instagram_logo_widget = ctk.CTkButton(self.menu_navigation_bottom_frame, text="",  image=instagram_logo, height=30, width=30)
 
         #--->twitter/x widget
-        x_logo = ctk.CTkImage(Image.open(r"images\x_logo.jpg"),size=(30,30))
+        x_logo = ctk.CTkImage(Image.open(r"Project\images\x_logo.jpg"),size=(30,30))
         x_logo_widget = ctk.CTkButton(self.menu_navigation_bottom_frame, text="", image=x_logo, height=30, width=30)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -390,7 +390,7 @@ class Burger_menu(ctk.CTkFrame):
         self.burger_menu_top_frame = ctk.CTkFrame(self)
         
         #--->logo
-        self.burger_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.burger_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.burger_menu_logo_widget = ctk.CTkLabel(self.burger_menu_top_frame, image=self.burger_menu_logo, text="")
 
          #--->title
@@ -608,7 +608,7 @@ class Not_burger_menu(ctk.CTkFrame):
         self.not_burger_menu_top_frame = ctk.CTkFrame(self)
         
         #--->logo
-        self.not_burger_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.not_burger_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.not_burger_menu_logo_widget = ctk.CTkLabel(self.not_burger_menu_top_frame, image=self.not_burger_menu_logo, text="")
 
          #--->title
@@ -833,7 +833,7 @@ class Dessert_menu(ctk.CTkFrame):
         self.dessert_menu_top_frame = ctk.CTkFrame(self)
         
         #--->logo
-        self.dessert_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.dessert_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.dessert_menu_logo_widget = ctk.CTkLabel(self.dessert_menu_top_frame, image=self.dessert_menu_logo, text="")
         
          #--->title
@@ -1059,7 +1059,7 @@ class Drinks_menu(ctk.CTkFrame):
         self.drinks_menu_top_frame = ctk.CTkFrame(self)
         
         #--->logo
-        self.drinks_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.drinks_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.drinks_menu_logo_widget = ctk.CTkLabel(self.drinks_menu_top_frame, image=self.drinks_menu_logo, text="")
 
          #--->title
@@ -1282,7 +1282,7 @@ class Milkshake_menu(ctk.CTkFrame):
         self.milkshake_menu_top_frame = ctk.CTkFrame(self)
         
         #--->logo
-        self.milkshake_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+        self.milkshake_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
         self.milkshake_menu_logo_widget = ctk.CTkLabel(self.milkshake_menu_top_frame, image=self.milkshake_menu_logo, text="")
 
          #--->title
@@ -1462,8 +1462,8 @@ def add_to_basket_window(master, product, description, price, instance, menu):
     add_to_basket_frame.grid(column=0, row=0, sticky="nsew")
 
     quantity_var = tk.StringVar(add_to_basket_frame, 1)
-    up_arrow = ctk.CTkImage(Image.open(r"images\up_arrow.png"),size=(20,20))
-    down_arrow = ctk.CTkImage(Image.open(r"images\down_arrow.png"),size=(20,20))
+    up_arrow = ctk.CTkImage(Image.open(r"Project\images\up_arrow.png"),size=(20,20))
+    down_arrow = ctk.CTkImage(Image.open(r"Project\images\down_arrow.png"),size=(20,20))
 
     
     product_title = ctk.CTkLabel(add_to_basket_frame, text=product, font=("TkHeadingFont", 30))
@@ -1788,7 +1788,7 @@ def checkout_window(basket_window):
 
     
     #--->logo
-    checkout_menu_logo = ctk.CTkImage(dark_image=Image.open(r"images\Logo15.png"),size=(50,50))
+    checkout_menu_logo = ctk.CTkImage(dark_image=Image.open(r"Project\images\Logo15.png"),size=(50,50))
     checkout_menu_logo_widget = ctk.CTkLabel(checkout_menu_top_frame, image=checkout_menu_logo, fg_color="#161219", text="")
     
 
