@@ -13,7 +13,7 @@ class Food:
     def add_to_basket(self, qty):
         self.total = self.price * qty
         if qty < 1:
-            print("please input a quanity")
+            print("please input a quanity greater than zero")
         else:
             if self.product in self.basket:
                 old_qty = 0
