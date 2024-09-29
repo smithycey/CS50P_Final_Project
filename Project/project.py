@@ -27,9 +27,6 @@ class App(ctk.CTk):
 
         self.title("Kays Cafe")
         self.eval("tk::PlaceWindow . center")
-        #self.geometry("1000x1000")
-        #self.columnconfigure(0, weight=1)
-        #self.rowconfigure(0, weight=1)
         ctk.set_default_color_theme(r"Project\theme.json")
 
 
@@ -66,13 +63,6 @@ class App(ctk.CTk):
         frame = self.frames[cont]
         frame.tkraise()
 
-
-    
-
-
-
-        # #--->title page
-        # title_frame(self)
 
 #~~~~~~~~~~~~title frame class~~~~~~~~~~~#
 

@@ -14,32 +14,33 @@ This file will allow you to install all of the required libraries for this proje
 
 #### project.py
 
+This is the main file of the project.
+
+The contents of this file generate, and run the customtkinter gui for Kays Cafe\
+
+The file consists of a parent class (App), along with 7 child classes.\
+
+The parent App class provides the theme for the rest of the file by linking the json file to the rest of the project, whilst also providing the functionatlity for the generation of and navigation between the various frames in the interface.\
+
+The child classes consist of the following: Title_frame, Menu_navigation_frame, Burger_menu, Not_burger_menu, Desserts_menu, Drinks_menu and Milkshakes_menu
+
+###### Title_frame:
+
+This class generates the first frame of the interface, essentially a welcome page showing a logo, title, message and button to enter further into the interface
+
+##### Menu_navigation_frame:
+
+This class generates the frame/home page which provides access to the remainder of the interface. This frame has buttons for each of the various menus on offer by the cafe (the other child classes referenced below) as well as the basket so that you can view what you currently have in your basket or checkout if ready to do so.
+
+This class has the purpose of providing access to the remainder of the interface. 
+
 #### menu.py
+
 The purpose of this file is to keep all of the functionality surrounding creating the actual menu of products, setting the names of the items, setting the prices and storing the classes in which the menu items are instantiated and the basket is managed all in one place.\
 This means that any modifications that need to be done to the menu can be done within this file, which will then be realised throughout the remainder of the project without having to navigate through the entirety of the main project file to make individual changes.
 
-The menu.py file consists of a parent class (Food) and 5 child classes.
-
-###### Food class:
-The Food class is the parent class which both manages, records and updates the basket whilst also providing the functionality for all of the child classes.
-
-The Food class begins with an empty dictionary named basket. This is where any items that are added to the basket will be stored in order for the project file to access later.
-
-Next is the init method which takes in the self, product and price variables as arguments and uses them to assign the product and price instance variables. It also assigns the self.total instance variable to the same value as self.price.
-
-Following the init method is the add_to_basket instance method which as the name suggests is used to add products to the basket dictionary referenced above. This method takes in the self and qty arguments.\
-This method updates the self.total using the self.price * qty, it checks that qty is not less than 1 and then checks if the product is already in the basket\
-If the product is in the basket already, then the method will update the basket adding the total price and quantity onto that product in the basket.\
-If however the item is not already in the basket then the method will simply add the product, quantity and total price to the basket.
-
-Finally in the Food class is the class method delete_from_basket which takes two arguments cls and key. This method has only one line of code which simply takes whichever key is passed to it and deletes that from the basket dict.
-
-##### Child Classes (Burgers, Not_Burgers, Desserts, Drinks, Milkshakes):
-
-The five child classes are all identical, they have the Food class as the parent, and then simply one just a init method which takes in self, product and price. This does the same with these arguments as the Food class. Also within this method is another init method which is used with the super function to initialize the attributes of the parent class, in this case product and price.
-
-##### Class Instantiation
-
+The menu.py file consists of a parent class named Food and 5 child classes: Burgers, Not_Burgers, Desserts, Drinks, Milkshakes\
+The Food class contains the basket dict which records any items added to the basket which are later accessed by the project.py file, and two instance methods other than the init method which are add_to_basket and delete_from_basket methods. This class provides the functionality for the child classes which all inherit from it and only contian an init method with another super function with init method inside which allow them to pull through the attributes from the parent class.\
 At the bottom of the file are each of the class instantiations. Each one is an individual product on the menu and these are seperated into 5 sections based on the menu they are assigned to.\
 Any alterations to the menu can be made here, as this is where the name of each product and the prices are passed as parameters when the classes are called
 
@@ -71,3 +72,6 @@ This function tests the place_order function from the project.py file by ensurin
 #### theme.json
 
 The purpose of this file is to the keep majority of the design for the project in one location. Fortunately the customtkinter library provides that functionality with the set_default_color_theme method to which you can pass a json file with all of the colours, font, font sizes etc for each type of customtkinter widget contained within. This means that the majority of changes to the design/colours etc of the project can all be done within one place, the theme.json file.
+
+### Reference Material:
+
