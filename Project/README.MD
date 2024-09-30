@@ -33,6 +33,24 @@ This class generates the first frame of the interface, essentially a welcome pag
 This class generates the frame/home page which provides access to the remainder of the interface. This frame has buttons for each of the various menus on offer by the cafe (the other child classes referenced below) as well as the basket so that you can view what you currently have in your basket or checkout if ready to do so.
 
 This class has the purpose of providing access to the remainder of the interface. 
+This class has the purpose of providing access to the remainder of the interface via a selection of buttons that take you to each of the other frames, for example there is a selection of buttons for each of the menus on offer by Kays Cafe along with a button that provides access to the basket once you are ready to proceed with your order.
+
+##### Burger_menu, Not_burger_menu, Desserts_menu, Drinks_menu and Milkshakes_menu:
+
+Each of these classes have essentially the same set up/ purpose of generating a menu frame with buttons for each of the products that have been instantiated to the corresponding class from the menu.py file. By clicking on one of these buttons, you are able to call the add_to_basket method from the Food class of the menu.py file which is inherited by each of the corresponding classes in the menu.py file in order to add that product to the basket in the interface.
+
+You can also either navigate back to the Menu_navigation_frame or to the basket using the other buttons available on these menu frames.
+
+##### Functions:
+
+After the classes there are the functions, starting with the main function which simply instantiates and runs the App class when called\
+Following on from that are various further functions with a variety of purposes, some create part of the interface, generating customtkinter windows when called and others that simply facilitate some of the functionality within the interface/project such as updating the basket etc
+
+The functions that follow consist of: add_to_basket_window, basket_window, update_basket_total, checkout_window, place_order, clear_basket, confirmation_window, generate_receipt and email_receipt.
+
+
+
+
 
 #### menu.py
 
