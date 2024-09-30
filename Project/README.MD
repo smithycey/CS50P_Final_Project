@@ -47,9 +47,41 @@ Following on from that are various further functions with a variety of purposes,
 
 The functions that follow consist of: add_to_basket_window, basket_window, update_basket_total, checkout_window, place_order, clear_basket, confirmation_window, generate_receipt and email_receipt.
 
+##### add_to_basket_window:
 
+This function generates a pop-up window that appears over the current window when you click on one of the products, providing you with the option to select the quantity you require and then add the product to the basket by calling the corresponding add_to_basket method for that instances class in the menu.py file.
 
+##### basket_window:
 
+This function generates a pop-up window that appears over the current window when you click on the basket button from any of the menus or the menu navigation page. This window displays a list of all the items currently in the basket along with the quantities, prices and the total price for the basket. There is also an option to select any of the items currently in the basket within a drop down list, in order to then delete that item from the basket if you have changed your mind about requiring that product. Finally there is a checkout button for when you are ready to proceed with you order which will take you through to the next stage of the ordering process.
+
+##### update_basket_total:
+
+This function simply gets called by various other functions each time the contents of the basket are altered, when that happens this function recalculates the total cost of the basket to ensure the price showing both within the basket but also on each of the menu pages and the navigation page is always up to date
+
+##### checkout_window:
+
+This function when called, closes the basket window and generates another pop-up window for the checkout page. This page provides the user with various fields in which they can enter their details for the purposes of their online order. These details will also be used later on in the project for sending the email receipt to the customer. The user then has the option of clicking the "Place Order" button at the bottom of the page, once they have completed their details and are ready to proceed with the order.
+
+##### place_order:
+
+This function is called when the "Place Order" button is pressed in the checkout_window. The checkout_window function will pass the details taken from the user to the place_order function as parameters at which point the place_order function will then perform some checks on the details provided, such as ensuring that the value provided for house number is a numeric value, or that the post code provided matches the format for a UK postcode. Same for the phone number which must be the correct length for a UK phone number and other fields have checks which will fail if they clearly have invalid values within them. If any of these checks fail then the place_order function will raise a ValueError at which point the user will not be able to proceed past the checkout window until the details are corrected. If they do pass however then the place order function will simply call the following 3 functions: generate_receipt, confirmation_window and clear_basket, passing user details as parameters to the first two. These functions will be explained below.
+
+##### clear_basket:
+
+This function simply resets the basket to an empty dict and then calls the update_basket_total func so that the total basket price also updates back to 0 as now the order has been placed, the user should be able to place another order into a fresh basket if necessary.
+
+##### confirmation_window:
+
+This function will close the checkout window and then generate a new pop-up window over the existing window which will simply display a message with a greeting using the customers name and confirming their order and that they will receive email confirmation and a receipt to the email provided. This is thanks to the parameters passed to this function from the place_order function which originally came from the checkout_window function 
+
+##### generate_receipt:
+
+This function will create 3 lists of item names, quantities and prices as well as a total quantity of items and a total price of items from the values in the basket in the Food class of menu.py. It will then use this data to create a dict named table which will serve as the data for the customer receipt. The function will then call email_receipt and pass as parameters the table dict, a list of headers and the relevant customer details (name & email) that were passed through from the place_order function.
+
+##### email_receipt:
+
+This function will utilize the SMTP library to connect to the gmail.com server and dispatch an email to the email address provided by the customer. Due to the customers name also being passed through from the checkout window, the email will greet them by name, and there are also 2 options for the email, one written in html which is the first option and a second in text. This means if the email fails to send in html then it will retry the text version. The table dict that was passed through for the receipt is reformated using the tabulate library to look like an actual receipt and included in the body of the email.
 
 #### menu.py
 
