@@ -32,7 +32,6 @@ This class generates the first frame of the interface, essentially a welcome pag
 
 This class generates the frame/home page which provides access to the remainder of the interface. This frame has buttons for each of the various menus on offer by the cafe (the other child classes referenced below) as well as the basket so that you can view what you currently have in your basket or checkout if ready to do so.
 
-This class has the purpose of providing access to the remainder of the interface. 
 This class has the purpose of providing access to the remainder of the interface via a selection of buttons that take you to each of the other frames, for example there is a selection of buttons for each of the menus on offer by Kays Cafe along with a button that provides access to the basket once you are ready to proceed with your order.
 
 ##### Burger_menu, Not_burger_menu, Desserts_menu, Drinks_menu and Milkshakes_menu:
