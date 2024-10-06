@@ -351,14 +351,14 @@ class Burger_menu(ctk.CTkFrame):
 
         #--->item description
 
-        self.burger_description1 = tk.StringVar(self, "Placeholder text....")
-        self.burger_description2 = tk.StringVar(self, "Placeholder text....")
-        self.burger_description3 = tk.StringVar(self, "Placeholder text....")
-        self.chick_burger_description1 = tk.StringVar(self, "Placeholder text....")
-        self.chick_burger_description2 = tk.StringVar(self, "Placeholder text....")
-        self.chick_burger_description3 = tk.StringVar(self, "Placeholder text....")
-        self.v_burger_description = tk.StringVar(self, "Placeholder text....")        
-        self.ve_burger_description = tk.StringVar(self, "Placeholder text....")
+        self.burger_description1 = tk.StringVar(self, burger_option_1.description)
+        self.burger_description2 = tk.StringVar(self, burger_option_2.description)
+        self.burger_description3 = tk.StringVar(self, burger_option_3.description)
+        self.chick_burger_description1 = tk.StringVar(self, chick_burger_option_1.description)
+        self.chick_burger_description2 = tk.StringVar(self, chick_burger_option_2.description)
+        self.chick_burger_description3 = tk.StringVar(self, chick_burger_option_3.description)
+        self.v_burger_description = tk.StringVar(self, vegetarian_option_1.description)        
+        self.ve_burger_description = tk.StringVar(self, vegan_option_1.description)
 
         #--->item basket price
 
@@ -564,15 +564,15 @@ class Not_burger_menu(ctk.CTkFrame):
 
         #--->item description
 
-        self.not_burger_description1 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description2 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description3 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description4 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description5 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description6 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description7 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description8 = tk.StringVar(self, "Placeholder text.....")
-        self.not_burger_description9 = tk.StringVar(self, "Placeholder text.....")
+        self.not_burger_description1 = tk.StringVar(self, not_burger_option_1.description)
+        self.not_burger_description2 = tk.StringVar(self, not_burger_option_2.description)
+        self.not_burger_description3 = tk.StringVar(self, not_burger_option_3.description)
+        self.not_burger_description4 = tk.StringVar(self, not_burger_option_4.description)
+        self.not_burger_description5 = tk.StringVar(self, not_burger_option_5.description)
+        self.not_burger_description6 = tk.StringVar(self, not_burger_option_6.description)
+        self.not_burger_description7 = tk.StringVar(self, not_burger_option_7.description)
+        self.not_burger_description8 = tk.StringVar(self, not_burger_option_8.description)
+        self.not_burger_description9 = tk.StringVar(self, not_burger_option_9.description)
 
         #--->item basket price
 
@@ -788,15 +788,15 @@ class Dessert_menu(ctk.CTkFrame):
 
         #--->item description
 
-        self.dessert_description1 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description2 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description3 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description4 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description5 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description6 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description7 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description8 = tk.StringVar(self, "Placeholder text.....")
-        self.dessert_description9 = tk.StringVar(self, "Placeholder text.....")
+        self.dessert_description1 = tk.StringVar(self, dessert_option_1.description)
+        self.dessert_description2 = tk.StringVar(self, dessert_option_2.description)
+        self.dessert_description3 = tk.StringVar(self, dessert_option_3.description)
+        self.dessert_description4 = tk.StringVar(self, dessert_option_4.description)
+        self.dessert_description5 = tk.StringVar(self, dessert_option_5.description)
+        self.dessert_description6 = tk.StringVar(self, dessert_option_6.description)
+        self.dessert_description7 = tk.StringVar(self, dessert_option_7.description)
+        self.dessert_description8 = tk.StringVar(self, dessert_option_8.description)
+        self.dessert_description9 = tk.StringVar(self, dessert_option_9.description)
 
 
         #--->item basket price
@@ -1014,15 +1014,15 @@ class Drinks_menu(ctk.CTkFrame):
 
         #--->item description
 
-        self.drinks_description1 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description2 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description3 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description4 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description5 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description6 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description7 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description8 = tk.StringVar(self, "Placeholder text....")
-        self.drinks_description9 = tk.StringVar(self, "Placeholder text....")
+        self.drinks_description1 = tk.StringVar(self, drinks_option_1.description)
+        self.drinks_description2 = tk.StringVar(self, drinks_option_2.description)
+        self.drinks_description3 = tk.StringVar(self, drinks_option_3.description)
+        self.drinks_description4 = tk.StringVar(self, drinks_option_4.description)
+        self.drinks_description5 = tk.StringVar(self, drinks_option_5.description)
+        self.drinks_description6 = tk.StringVar(self, drinks_option_6.description)
+        self.drinks_description7 = tk.StringVar(self, drinks_option_7.description)
+        self.drinks_description8 = tk.StringVar(self, drinks_option_8.description)
+        self.drinks_description9 = tk.StringVar(self, drinks_option_9.description)
 
 
         #--->item basket price
@@ -1239,15 +1239,15 @@ class Milkshake_menu(ctk.CTkFrame):
 
         #--->item description
         
-        self.milkshake_description1 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description2 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description3 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description4 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description5 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description6 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description7 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description8 = tk.StringVar(self, "Placeholder text......")
-        self.milkshake_description9 = tk.StringVar(self, "Placeholder text......")
+        self.milkshake_description1 = tk.StringVar(self, milkshake_option_1.description)
+        self.milkshake_description2 = tk.StringVar(self, milkshake_option_2.description)
+        self.milkshake_description3 = tk.StringVar(self, milkshake_option_3.description)
+        self.milkshake_description4 = tk.StringVar(self, milkshake_option_4.description)
+        self.milkshake_description5 = tk.StringVar(self, milkshake_option_5.description)
+        self.milkshake_description6 = tk.StringVar(self, milkshake_option_6.description)
+        self.milkshake_description7 = tk.StringVar(self, milkshake_option_7.description)
+        self.milkshake_description8 = tk.StringVar(self, milkshake_option_8.description)
+        self.milkshake_description9 = tk.StringVar(self, milkshake_option_9.description)
 
         #--->item basket price
 
