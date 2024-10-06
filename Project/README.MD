@@ -6,6 +6,9 @@ Welcome to Kays Cafe!\
 This project is a gui application for an online ordering system for Kays Cafe\
 It allows you to access the gui interface and navigate through the various menus available to view the selection of products on offer by the cafe. You can then add any of these products to the basket, at which point you can then go to the basket, which you can edit by removing a product if you no longer require it and once satisfied with your selection you can continue through to the checkout window where you will enter your details before confirming your order. Once you have confirmed your order you will be presented with the order confirmation window which will confirm you have placed your order and that a confirmation email along with a receipt will be sent to the email address provided.
 
+I decided to go with a GUI interface for my CS50P final project as I wanted to try applying the skills taught so far on something that has not yet been covered in the course/
+Originally I began using Tkinter as the library for the GUI, however not long after starting the project I found this to be quite limiting and having done some research I discovered the Customtkinter library which appeared to offer far more flexibility and options in the design of the GUI along with a more modern design overall and decided to proceed with that instead.
+
 ### Files:
 
 #### requirements.txt
@@ -16,9 +19,9 @@ This file will allow you to install all of the required libraries for this proje
 
 This is the main file of the project.
 
-The contents of this file generate, and run the customtkinter gui for Kays Cafe\
+The contents of this file generate, and run the customtkinter gui for Kays Cafe
 
-The file consists of a parent class (App), along with 7 child classes.\
+The file consists of a parent class (App), along with 7 child classes.
 
 The parent App class provides the theme for the rest of the file by linking the json file to the rest of the project, whilst also providing the functionatlity for the generation of and navigation between the various frames in the interface.\
 
@@ -123,4 +126,17 @@ This function tests the place_order function from the project.py file by ensurin
 The purpose of this file is to the keep majority of the design for the project in one location. Fortunately the customtkinter library provides that functionality with the set_default_color_theme method to which you can pass a json file with all of the colours, font, font sizes etc for each type of customtkinter widget contained within. This means that the majority of changes to the design/colours etc of the project can all be done within one place, the theme.json file.
 
 ### Reference Material:
+
+Throughout the course I have naturally utulised the internet for research purposes and in some cases adapted snippets of code into my own work, so I just wanted to provide clarification on some of the reference material I have used.
+
+For the actual GUI libraries such as Tkinter and Customtkinter, I had already done a lot of research previously on Tkinter having watched many Youtube tutorials/demonstrations weeks prior to the project which was partially what prompted me to start with that library. Throughout the course of the project I continued to utilise Youtube videos as well as the documentation and particarlarly once I moved over to the Customtkinter library I was able to rely almost solely on the documentation on that as I found it much clearer to follow. The main youtube channels I would say that I utilised for help research with tkinter and customtkinter are Python Simplified and Tkinter.com
+
+I did reach out for some help on Stack Overflow with one question regarding my set up of the classes in the menu.py file https://stackoverflow.com/questions/78818242/how-to-record-attributes-from-each-instance-in-a-class-variable-while-having-th, however although the answers were very helpful and able to answer my question, I realised soon after that I actually was overthinking in the first place and didn't need to do the task I was trying to accomplish when I asked the question, as I only actually needed the parent class to record the attributes to the class variable rather than the child and parent classes doing so.
+
+As for lines of code that I have adapted into my work, please see below list with citations:
+
+- Having done research for a better implementation for swithching frames whithin the GUI over the one I was currently using, I came across the following page https://www.geeksforgeeks.org/tkinter-application-to-switch-between-different-page-frames/, i have adapted this into my project.py file within the App class
+- Finally I also adapted some of the code from the following links: https://stackoverflow.com/questions/38275467/send-table-as-an-email-body-not-attachment-in-python, https://stackoverflow.com/questions/47153105/add-borders-of-table-sent-by-email-via-python, for help in correctly constructing and formatting the email receipt in the email_receipt function of the project.py file
+- I should add that the above was all done alongside the backdrop of extensive research within the documentation for the relevant libraries.
+
 
