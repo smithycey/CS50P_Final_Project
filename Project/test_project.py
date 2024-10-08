@@ -20,7 +20,7 @@ def test_generate_receipt_calls_email_receipt(mock_email_receipt):
 def test_email_receipt_sends_mail():
     # asserting that email_receipt will return empty dict as smtp.sendmail returns
     # an dict containing the email addresses that failed to send if unsuccessful
-    assert email_receipt("smithycey@gmail.com", 
+    assert email_receipt("KaysCafe86@outlook.com", 
                          "Ciaran Smith", 
                          table, order_list_headers) == {}
 
